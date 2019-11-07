@@ -6,4 +6,4 @@ services:
 before_install:
  - docker build -t crust/reactaws -f Dockerfile.dev .
 script:
- - docker run -e CI=true crust/reactaws npm run test
+ - docker run crust/reactaws npm run test -- --coverage
